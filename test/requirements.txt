@@ -1,0 +1,8 @@
+pytesseract
+keyboard
+Pillow
+google-generativeai
+requests
+pywin32
+pygetwindow
+pyautogui

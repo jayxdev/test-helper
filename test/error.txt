@@ -1,0 +1,36 @@
+PS C:\Users\JAYDEV\Desktop\tester cli> python -u "c:\Users\JAYDEV\Desktop\tester cli\main.py"
+**MCQ:** Which of the following is the capital of India?
+(a) Mumbai
+(b) New Delhi
+(c) Kolkata
+(d) Chennai
+
+**Answer:** (b) New Delhi
+Press 'Ctrl + Shift + 1' to capture text and get an answer. Press 'Ctrl+Shift+X' to exit.
+Exception in thread Thread-3 (process):
+Traceback (most recent call last):
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\site-packages\keyboard\_generic.py", line 58, in process
+    if self.pre_process_event(event):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\site-packages\keyboard\__init__.py", line 218, in pre_process_event
+    callback(event)
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\site-packages\keyboard\__init__.py", line 649, in <lambda>
+    handler = lambda e: (event_type == KEY_DOWN and e.event_type == KEY_UP and e.scan_code in _logically_pressed_keys) or (event_type == e.event_type and callback())
+                                                                              
+                                                                            ^^^^^^^^^^
+  File "c:\Users\JAYDEV\Desktop\tester cli\main.py", line 55, in on_shortcut  
+    answer = generate_answer(text)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\JAYDEV\Desktop\tester cli\main.py", line 33, in generate_answer
+    return generate(text)
+           ^^^^^^^^^^^^^^
+  File "c:\Users\JAYDEV\Desktop\tester cli\main.py", line 18, in generate     
+    return response.text
+           ^^^^^^^^^^^^^
+  File "C:\Users\JAYDEV\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\types\generation_types.py", line 436, in text
+    raise ValueError(
+ValueError: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
